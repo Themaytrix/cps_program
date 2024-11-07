@@ -44,7 +44,7 @@ int mode(int arr[]){
 int main(){
 	//int n = 5;
 	//int max_student_size = 1000;
-	int x[5];//array of variable length. 
+	int x[6];//array of variable length. 
 	//x[1]= x[2]= wrong because 
 	// indexing begins at 0. x[0] and x[1].
 	double avg=-5.0;
@@ -53,6 +53,7 @@ int main(){
 	x[2]= 5;
 	x[3]= 9;
 	x[4]= 10;
+	x[5] = 7;
 	int n = sizeof(x) / sizeof(x[0]);
 	printf("lenght = %d \n", n);
 
