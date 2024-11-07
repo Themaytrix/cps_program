@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #define SIZE 20
 int main()
 {
@@ -20,7 +21,7 @@ int main()
    {
       printf("We just read %d\n", num);
       i++;
-      if (count < 100)
+      if (count < 30)
       {
          number[count] = num;
          count++;
@@ -62,7 +63,21 @@ int main()
       }
    }
 
+   // standard deviation
+
+   double squared_difference = 0;
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		squared_difference += pow((number[i] - mean), 2);
+	}
+
+	double stdv = sqrt(squared_difference / SIZE);
+
+
+
    printf("The mean is %lf \n", mean);
    printf("The mode is %lf \n", mode);
+   printf("The standard deviation of the function = %lf \n", stdv);
    return 0;
 }
