@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
   double *u = (double *)malloc((N + 1) * sizeof(double));
   double *d2u = (double *)malloc((N - 1) * sizeof(double));
   double *errd2u = (double *)malloc((N - 1) * sizeof(double)); // calculating error.
-  double dx = (2*M_PI) / N;
+  double dx = (M_PI) / N;
 
   init(u, N, dx);
   // for (int i=0; i<N;++i)
